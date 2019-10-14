@@ -149,6 +149,7 @@ public class DbOperations {
 
     public void updateStudent(int studentage, String studentname, int studentid) {
         try {
+
             Connection connection = DbConfig.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("update student set studentname=? , studentage= ? where studentid= ?");
             preparedStatement.setString(1, studentname);
