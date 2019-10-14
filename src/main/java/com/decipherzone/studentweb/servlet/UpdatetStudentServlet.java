@@ -29,7 +29,7 @@ public class UpdatetStudentServlet extends HttpServlet {
         String studentname = "";
         int studentage = 0;
         if (dbOperations.idCheck(studentid)) {
-            List<Student> arraylist = dbOperations.displayindividuals(studentid);
+            List<Student > arraylist = dbOperations.displayindividuals(studentid);
             for (Student student : arraylist) {
                 studentname = student.getName();
                 studentage = student.getAge();
